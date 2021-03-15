@@ -1,3 +1,3 @@
 # ITP4716MLabDemo
-Lab Demo
+Lab Demo\n
 Hiiiii
