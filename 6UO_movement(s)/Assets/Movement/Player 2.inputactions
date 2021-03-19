@@ -1,22 +1,14 @@
 {
-    "name": "Controls",
+    "name": "Player 2",
     "maps": [
         {
             "name": "Gameplay",
-            "id": "38e2685a-93ac-457a-bca9-187705a14147",
+            "id": "eeedb88a-0487-4487-aea6-11d7e94dd185",
             "actions": [
                 {
                     "name": "Move",
                     "type": "Value",
-                    "id": "d49b4510-dcfe-4b0e-b817-e358e5f3844e",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Rotate",
-                    "type": "Value",
-                    "id": "db8bb0b2-a6c2-4afa-8fe8-026e212f846e",
+                    "id": "911a02d2-f55c-4ebe-9355-dd8d8a0a61df",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
@@ -24,19 +16,8 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "6e693338-1a14-4a53-89ca-b9210886fc51",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "WASD",
-                    "id": "265710f0-20c7-4c24-b530-6a96e28f478d",
+                    "name": "direction",
+                    "id": "ad738cb7-c4e0-41f1-b011-2b7d460745d3",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -47,8 +28,8 @@
                 },
                 {
                     "name": "up",
-                    "id": "832bd278-40fb-4e17-b3c2-bf7a9278d86f",
-                    "path": "<Keyboard>/w",
+                    "id": "1be78270-2d7c-46ee-a0be-f123b6f3a820",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -58,8 +39,8 @@
                 },
                 {
                     "name": "down",
-                    "id": "2bd459f9-1613-4b6b-8f12-fc4420f9f569",
-                    "path": "<Keyboard>/s",
+                    "id": "35a05d41-e3a9-4714-b35a-1c5c571279b2",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -69,8 +50,8 @@
                 },
                 {
                     "name": "left",
-                    "id": "8e84fb00-16e5-44fa-9393-bf44dcbc2265",
-                    "path": "<Keyboard>/a",
+                    "id": "ff0875b6-a6a8-4a15-87e1-ea3c6e780908",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -80,25 +61,14 @@
                 },
                 {
                     "name": "right",
-                    "id": "df147669-fc8a-4bcc-b116-6eced0d3e2b0",
-                    "path": "<Keyboard>/d",
+                    "id": "4c2fc14a-8ae8-478d-8717-6903dc31e044",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "300acbd6-e643-467d-9dca-090e15447bf8",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
