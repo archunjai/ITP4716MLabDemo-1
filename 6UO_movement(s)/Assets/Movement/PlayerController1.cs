@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
-{
-    public InputAction direction;
+public class PlayerController1 : MonoBehaviour
+{    
     public CharacterController controller;
     private void Start()
     {
