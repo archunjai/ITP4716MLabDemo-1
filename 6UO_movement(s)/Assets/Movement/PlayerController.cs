@@ -5,36 +5,33 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5;
-    private Vector2 movementInput;
-    public Vector2 rotateInput;
+    public InputAction direction;
+    public CharacterController controller;
+    private void Start()
+    {
+        controller = GetComponent<CharacterController>();
+    }
+
+    private void OnEnable()
+    {
+        direction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        direction.Disable();
+    }
 
     private void Update()
     {
-        if (movementInput.x > 0)
+        Vector2 inputVector = direction.ReadValue<Vector2>();
+        Vector3 finalVector = new Vector3();
+        finalVector.x = inputVector.x;
+        finalVector.z = inputVector.y;
+        controller.Move(finalVector * Time.deltaTime * 3.14f);
+        if (finalVector != Vector3.zero)
         {
-            gameObject.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
-            transform.Translate(new Vector3(movementInput.y, 0, movementInput.x) * speed * Time.deltaTime);
+            gameObject.transform.forward = finalVector;
         }
-        if (movementInput.x < 0)
-        {
-            gameObject.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-            transform.Translate(new Vector3(movementInput.y, 0, -movementInput.x) * speed * Time.deltaTime);
-        }
-
-        if (movementInput.y > 0)
-        {
-            gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            transform.Translate(new Vector3(movementInput.x, 0, movementInput.y) * speed * Time.deltaTime);
-        }
-        if (movementInput.y < 0)
-        {
-            gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            transform.Translate(new Vector3(movementInput.x, 0, -movementInput.y) * speed * Time.deltaTime);
-        }
-            
-        
     }
-
-        public void OnMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
 }
